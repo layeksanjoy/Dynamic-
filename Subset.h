@@ -48,34 +48,6 @@ bool SubsetSum_Recurr_Memo_helper( vector<int> arr, int sum, int n){
 }
 
 bool SubsetSum_Top_Bottom(vector<int> arr, int sum, int n) {
-  for (int i = 0; i <= arr.size(); i++) {
-      t.push_back({});
-      for (int j = 0; j <= sum; j++) {
-        if (j == 0)
-            t[i].push_back(true);
-        else if (i == 0 && j != 0)
-            t[i].push_back(false);
-        else
-            t[i].push_back(false);
-      }
-  }  
-
-    for (int i = 0; i <= arr.size(); i++) {
-        for (int j = 0; j <= sum; j++) {
-          if (arr[i - 1] <= j) {
-                bool t1 = t[i - 1][j - arr[i - 1]];
-                bool t2 = t[i - 1][j];
-                t[i][j] = (t1|| t2);
-            }
-            else {
-                t[i][j] = t[i - 1][j];
-            }
-        }
-    }
-    return t[n+1][sum];
-}
-
-bool SubsetSum_Top_Bottom(vector<int> arr, int sum, int n) {
     for (int i = 0; i <= arr.size(); i++) {
         t.push_back({});
         for (int j = 0; j <= sum; j++) {
