@@ -10,11 +10,11 @@
 #include<limits.h>
 #include <chrono>
 
-#include "minimumSubsetDiffrence.h"
+#include "SCSupersequence.h"
 
 using namespace std;
 
 int main() {
-  vector<int> arr = {1, 6, 11, 5};
-  cout<<minSubsetDiff_nonDP(arr);
+  //cout<<superSrquence("AGGTAB", "GXTXAYB");
+  cout<<shortestCommonSupersequence("bbbaaaba", "bbababbb");
 }
